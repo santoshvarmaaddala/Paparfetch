@@ -51,8 +51,8 @@ def fetch_paper_details(pubmub_ids: List[str]) -> List[Dict]:
             "PubmedID": pmid,
             "Title": title,
             "Publication Date": date,
-            "Non-academic Author(s)": "; ".join(set(non_academic_authors)),
-            "Company Affiliation(s)": "; ".join(set(company_names)),
+            "Non-academic Author(s)": "; ".join(set(non_academic_authors)) or 'N/A',
+            "Company Affiliation(s)": "; ".join(set(company_names)) or 'N/A',
             "Corresponding Author Email": email or "N/A"
         }) 
 
