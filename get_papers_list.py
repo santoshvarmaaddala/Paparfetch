@@ -1,6 +1,6 @@
 import argparse
 import csv
-from get_papers.main import fetch_paper_details, fetch_pubmed_ids
+from src.get_papers.main import fetch_paper_details, fetch_pubmed_ids
 
 def main():
     parser = argparse.ArgumentParser(description="Fetch PubMed papers for pharma authors.")
@@ -16,7 +16,7 @@ def main():
 
     results = fetch_paper_details(ids)
     if args.file:
-        with open(args.file, "w", newline="") as f:
+        with open(args.file, "w", newline="", encoding="utf-8") as f:
             writer = csv.DictWriter(f, fieldnames=results[0].keys())
             writer.writeheader()
             writer.writerows(results)
