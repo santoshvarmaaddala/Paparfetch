@@ -43,8 +43,8 @@ def fetch_paper_details(pubmub_ids: List[str]) -> List[Dict]:
                     non_academic_authors.append(affiliation_text)
 
         email = None
-        if "@" in str(affiliations):
-            email = extract_email(str(affiliations)) # extracting email
+        if "@" in affiliation.findtext("Affiliation", default=""):
+            email = extract_email(affiliation.findtext("Affiliation", default="")) # extracting email
 
         # adding result
         results.append({

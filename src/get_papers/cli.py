@@ -1,6 +1,6 @@
 import argparse
 import csv
-from src.get_papers.main import fetch_paper_details, fetch_pubmed_ids
+from .main import fetch_paper_details, fetch_pubmed_ids
 
 # entry point for cmd line tool
 def main():
