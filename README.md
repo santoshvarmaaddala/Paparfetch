@@ -1,4 +1,4 @@
-# 🧪 PubMEd-CLI-Tool
+# 🧪 PubMed-CLI-Tool
 
 A Python command-line tool that fetches PubMed research articles based on a search query, extracts metadata, and filters for non-academic pharmaceutical authors. Outputs can be saved in CSV format.
 
